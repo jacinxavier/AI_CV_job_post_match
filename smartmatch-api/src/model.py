@@ -183,7 +183,7 @@ def model_score(CV_path, filters=None):
     try:
         # Attempt to get the API key from an environment variable
         # Switch back to secret instead of hardcoded API key for final submission
-        gemini_api_key = 'AIzaSyDDhgYMcWY42RyjZvjT5z1AJrCLY29TCiI'
+        gemini_api_key = ''
         genai.configure(api_key=gemini_api_key)
         is_api_key_configured = True
 
@@ -274,4 +274,5 @@ def model_score(CV_path, filters=None):
 
     # Convert DataFrame to list of dicts for JSON serialization
     return top_jobs_output.fillna("").to_dict(orient="records")
+
 
